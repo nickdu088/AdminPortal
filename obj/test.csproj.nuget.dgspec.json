@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Documents\\GitHub\\test\\test.csproj": {}
+    "/Users/yuliang/Desktop/IT/AdminPortal/test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Documents\\GitHub\\test\\test.csproj": {
+    "/Users/yuliang/Desktop/IT/AdminPortal/test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\test\\test.csproj",
+        "projectUniqueName": "/Users/yuliang/Desktop/IT/AdminPortal/test.csproj",
         "projectName": "test",
-        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\test\\test.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\test\\obj\\",
+        "projectPath": "/Users/yuliang/Desktop/IT/AdminPortal/test.csproj",
+        "packagesPath": "/Users/yuliang/.nuget/packages/",
+        "outputPath": "/Users/yuliang/Desktop/IT/AdminPortal/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/yuliang/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
         }
       }
     }
