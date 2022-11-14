@@ -6,7 +6,7 @@ using test.Models;
 
 namespace test.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrators")]
     [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
@@ -17,9 +17,12 @@ namespace test.Controllers
             context = applicationDbContext;
         }
         [HttpGet]
-        public IEnumerable<ApplicationUser> Get()
+        public IEnumerable<ApplicationUser> Get() => context.Users;
+
+        [HttpGet]
+        public async Task<ApplicationUser?> GetAsync(string id)
         {
-            return context.Users;
+            return await context.Users.FindAsync(id);
         }
     }
 }
