@@ -19,7 +19,7 @@ namespace test.Controllers
         [HttpGet]
         public IEnumerable<ApplicationUser> Get() => context.Users;
 
-        [HttpGet]
+        [HttpGet("~/id")]
         public async Task<ApplicationUser?> GetAsync(string id)
         {
             return await context.Users.FindAsync(id);
