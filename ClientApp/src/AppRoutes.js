@@ -6,6 +6,8 @@ import Home from "./components/Home/Home";
 const AppRoutes = [
   {
     index: true,
+    path: '/',
+    requireAuth: true,
     element: <Home />
   },
   {
@@ -16,6 +18,10 @@ const AppRoutes = [
     path: '/fetch-data',
     requireAuth: true,
     element: <FetchData />
+  },
+  {
+    path: '/users',
+    requireAuth: true,
   },
   ...ApiAuthorzationRoutes
 ];
