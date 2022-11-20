@@ -10,105 +10,109 @@ import woman1 from '../../Images/woman1.jpg';
 import woman2 from '../../Images/woman2.jpg';
 import './datatable.scss';
 
-// Replace this data with your own
-const userData = [
-    {
-        id: '630343eb94c2812e4cd7e45d',
-        username: 'Devid434',
-        email: 'devidbom232@gmail.com',
-        image: man1,
-        status: 'active',
-        age: '24',
-    },
-    {
-        id: '6303234eb94c2812e4cd7e45e',
-        username: 'Johnn434',
-        email: 'john03434@gmail.com',
-        image: man2,
-        status: 'passive',
-        age: '29',
-    },
-    {
-        id: 'e40343eb94c2812e4cd7e4233',
-        username: 'Dilvib1233',
-        email: 'dilvibhasanjohn1233@gmail.com',
-        image: man3,
-        status: 'active',
-        age: '20',
-    },
-    {
-        id: '930343eb94c2812e4cd7e45g',
-        username: 'DoeJelia88',
-        email: 'doejelia88@gmail.com',
-        image: woman1,
-        status: 'active',
-        age: '23',
-    },
-    {
-        id: '60443eb94c2812e4cd7e45ii',
-        username: 'Lucas0984',
-        email: 'lucashossel@gmail.com',
-        image: man4,
-        status: 'passive',
-        age: '30',
-    },
-    {
-        id: 'e23343eb94c2812e4cd7e45kk',
-        username: 'Annie765',
-        email: 'anniejhon@gmail.com',
-        image: woman2,
-        status: 'active',
-        age: '23',
-    },
-    {
-        id: '63asd34eb94c2812e4cd7e45e',
-        username: 'Johnn434',
-        email: 'john03434@gmail.com',
-        image: man2,
-        status: 'passive',
-        age: '29',
-    },
-    {
-        id: 'e40gfdeb94c2812e4cd7e4233',
-        username: 'Dilvib1233',
-        email: 'dilvibhasanjohn1233@gmail.com',
-        image: man3,
-        status: 'active',
-        age: '20',
-    },
-    {
-        id: '60443lkjc2812e4cd7e45ii',
-        username: 'Lucas0984',
-        email: 'lucashossel@gmail.com',
-        image: man4,
-        status: 'passive',
-        age: '30',
-    },
-    {
-        id: '930343eb9465512e4cd7e45g',
-        username: 'DoeJelia88',
-        email: 'doejelia88@gmail.com',
-        image: woman1,
-        status: 'active',
-        age: '23',
-    },
-    {
-        id: '60443eb94c8ui2e4cd7e45ii',
-        username: 'Lucas0984',
-        email: 'lucashossel@gmail.com',
-        image: man4,
-        status: 'passive',
-        age: '30',
-    },
-    {
-        id: '6303234eb9987812ed7e45e',
-        username: 'Johnn434',
-        email: 'john03434@gmail.com',
-        image: man2,
-        status: 'passive',
-        age: '29',
-    },
-];
+// const userData = [
+//     {
+//         id: '630343eb94c2812e4cd7e45d',
+//         username: 'Devid434',
+//         email: 'devidbom232@gmail.com',
+//         image: man1,
+//         status: 'active',
+//         age: '24',
+//     },
+//     {
+//         id: '6303234eb94c2812e4cd7e45e',
+//         username: 'Johnn434',
+//         email: 'john03434@gmail.com',
+//         image: man2,
+//         status: 'passive',
+//         age: '29',
+//     },
+//     {
+//         id: 'e40343eb94c2812e4cd7e4233',
+//         username: 'Dilvib1233',
+//         email: 'dilvibhasanjohn1233@gmail.com',
+//         image: man3,
+//         status: 'active',
+//         age: '20',
+//     },
+//     {
+//         id: '930343eb94c2812e4cd7e45g',
+//         username: 'DoeJelia88',
+//         email: 'doejelia88@gmail.com',
+//         image: woman1,
+//         status: 'active',
+//         age: '23',
+//     },
+//     {
+//         id: '60443eb94c2812e4cd7e45ii',
+//         username: 'Lucas0984',
+//         email: 'lucashossel@gmail.com',
+//         image: man4,
+//         status: 'passive',
+//         age: '30',
+//     },
+//     {
+//         id: 'e23343eb94c2812e4cd7e45kk',
+//         username: 'Annie765',
+//         email: 'anniejhon@gmail.com',
+//         image: woman2,
+//         status: 'active',
+//         age: '23',
+//     },
+//     {
+//         id: '63asd34eb94c2812e4cd7e45e',
+//         username: 'Johnn434',
+//         email: 'john03434@gmail.com',
+//         image: man2,
+//         status: 'passive',
+//         age: '29',
+//     },
+//     {
+//         id: 'e40gfdeb94c2812e4cd7e4233',
+//         username: 'Dilvib1233',
+//         email: 'dilvibhasanjohn1233@gmail.com',
+//         image: man3,
+//         status: 'active',
+//         age: '20',
+//     },
+//     {
+//         id: '60443lkjc2812e4cd7e45ii',
+//         username: 'Lucas0984',
+//         email: 'lucashossel@gmail.com',
+//         image: man4,
+//         status: 'passive',
+//         age: '30',
+//     },
+//     {
+//         id: '930343eb9465512e4cd7e45g',
+//         username: 'DoeJelia88',
+//         email: 'doejelia88@gmail.com',
+//         image: woman1,
+//         status: 'active',
+//         age: '23',
+//     },
+//     {
+//         id: '60443eb94c8ui2e4cd7e45ii',
+//         username: 'Lucas0984',
+//         email: 'lucashossel@gmail.com',
+//         image: man4,
+//         status: 'passive',
+//         age: '30',
+//     },
+//     {
+//         id: '6303234eb9987812ed7e45e',
+//         username: 'Johnn434',
+//         email: 'john03434@gmail.com',
+//         image: man2,
+//         status: 'passive',
+//         age: '29',
+//     },
+// ];
+
+const response=await fetch('https://localhost:7262/Users')
+let userData=await response.json()
+console.log(userData)
+
 
 function DataTable() {
     const [data, setData] = useState(userData);

@@ -6,7 +6,7 @@ using test.Models;
 
 namespace test.Controllers
 {
-    [Authorize(Roles = "Administrators")]
+  //  [Authorize(Roles = "Administrators")]
     [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
