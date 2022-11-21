@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
-import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
-import { Layout } from './components/Layout';
+import AuthorizeRoute from './Components/api-authorization/AuthorizeRoute';
+import { Layout } from './Components/Layout';
 import './app.scss';
 
 

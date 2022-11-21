@@ -25,9 +25,9 @@ builder.Services.AddAuthentication()
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddSwaggerGen();
-builder.Services.AddCors(p=>p.AddPolicy("corspolicy",build=>{
-    build.WithOrigins("https://localhost:3000").AllowAnyMethod().AllowAnyHeader();
-}));
+//builder.Services.AddCors(p=>p.AddPolicy("corspolicy",build=>{
+//    build.WithOrigins("https://localhost:3000").AllowAnyMethod().AllowAnyHeader();
+//}));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -46,14 +46,14 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-app.UseCors("corspolicy");
+//app.UseCors("corspolicy");
 app.UseAuthentication();
 app.UseIdentityServer();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");
+    pattern: "api/{controller}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.MapFallbackToFile("index.html");;

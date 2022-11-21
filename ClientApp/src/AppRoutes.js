@@ -1,7 +1,8 @@
-import ApiAuthorzationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
-import { Counter } from "./components/Counter";
-import { FetchData } from "./components/FetchData";
-import Home from "./components/Home/Home";
+import ApiAuthorzationRoutes from './Components/api-authorization/ApiAuthorizationRoutes';
+import { Counter } from "./Components/Counter";
+import { FetchData } from "./Components/FetchData";
+import Home from "./Components/Home/Home";
+import Lists from './Pages/UserLists/UserLists';
 
 const AppRoutes = [
   {
@@ -21,7 +22,8 @@ const AppRoutes = [
   },
   {
     path: '/users',
-    requireAuth: true,
+      requireAuth: true,
+      element: <Lists type="user" />
   },
   ...ApiAuthorzationRoutes
 ];

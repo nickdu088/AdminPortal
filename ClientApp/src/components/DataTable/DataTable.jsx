@@ -2,6 +2,7 @@
 import { DataGrid } from '@mui/x-data-grid';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import authService from '../api-authorization/AuthorizeService'
 import man1 from '../../Images/man1.jpg';
 import man2 from '../../Images/man2.jpg';
 import man3 from '../../Images/man3.jpg';
@@ -109,9 +110,13 @@ import './datatable.scss';
 //     },
 // ];
 
-const response=await fetch('https://localhost:7262/Users')
-let userData=await response.json()
-console.log(userData)
+const userData = async () => {
+    const token = await authService.getAccessToken();
+    const response = await fetch('api/users', {
+        headers: !token ? {} : { 'Authorization': `Bearer ${token}` }
+    });
+    let userData = await response.json();
+}
 
 
 function DataTable() {
@@ -134,7 +139,7 @@ function DataTable() {
             ),
         },
         {
-            field: 'username',
+            field: 'userName',
             headerName: 'Username',
             width: 180,
         },
@@ -145,28 +150,6 @@ function DataTable() {
             width: 150,
             renderCell: (param) => (
                 <div className={`status ${param.row.status}`}>{param.row.status}</div>
-            ),
-        },
-        { field: 'age', headerName: 'Age', width: 120 },
-        {
-            field: 'action',
-            headerName: 'Action',
-            width: 170,
-            renderCell: (params) => (
-                <div className="actionn">
-                    <Link to={params.row.id}>
-                        <button type="button" className="view_btn">
-                            View
-                        </button>
-                    </Link>
-                    <button
-                        type="button"
-                        className="delete_btn"
-                        onClick={() => handleDlt(params.row.id)}
-                    >
-                        Delete
-                    </button>
-                </div>
             ),
         },
     ];
